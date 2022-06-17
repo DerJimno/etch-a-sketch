@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Etch-a-Sketch</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,9 +11,43 @@
 </head>
 
 <body>
+<div class="alles">
+    <div id="contentBtn" >
+        <div><input type="range" list="tickmarks" id="grids" name=" grids"
+         min="14" max="64" value="64" step="10">
+        <label for="grids"></label>
+        <datalist id="tickmarks">
+        <option value="14"></option>
+        <option value="24"></option>
+        <option value="34"></option>
+        <option value="44"></option>
+        <option value="54"></option>
+        <option value="64"></option>
+        </datalist>
+        </div>
+        <div>64 x 64</div>
+        <div><button class="clearBtn"> Clear</button> </div>
+    </div>
 
+    <div class="content">
+        <h1>Etch a Sketch</h1>
+    
 
+    <table id="container"></table>
+    </div>
 
+    
+
+    <div class="coloringBtn">
+        <div><button class="colorBtn" >Color</button></div>
+        <div>
+            <input type="color" id="col" name="color"
+                   value="#e66465">
+            <label for="col">Choose</label>
+        </div>
+        <div><button  class="rainbowBtn"> Rainbow mode</button></div>
+    </div>
+</div>    
     
 </body>
 </html>

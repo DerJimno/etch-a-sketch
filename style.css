@@ -1,0 +1,70 @@
+html,
+body {
+    margin: 0;
+    background-color: antiquewhite;
+}
+#container {
+    outline: 2px solid #000;
+    font-size: 0;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+h1 {
+        align-items: center;
+        color: rgb(255, 123, 0);
+}
+table {
+    border-collapse: collapse;
+  }
+td {
+    background-color: aliceblue;
+}
+button {
+    color: rgb(255, 123, 0);
+    font-size: larger;
+    border-radius: 40%;
+    transition: 0.4s;
+    padding: 8px;
+}
+button:hover {
+    background-color: aqua;
+}
+#col {
+    display: flex;
+    flex-direction: column-reverse;
+    border: none;
+    border-radius: 10%;
+}
+#contentBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    margin-right: 3rem;
+    gap: 2rem;
+}
+.coloringBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    margin-left: 3rem;
+    gap: 2rem;
+}
+.alles {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-self: flex-start;
+}
