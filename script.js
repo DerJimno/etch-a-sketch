@@ -1,0 +1,1 @@
+const sixteenDivs = document.querySelector
