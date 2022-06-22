@@ -3,35 +3,43 @@ body {
     margin: 0;
     background-color: antiquewhite;
 }
+:root {
+    --clr-change: rgb(255, 128, 64);
+}
 #container {
-    outline: 2px solid #000;
+    transition: 1.5s;
+    outline: 2px solid var(--clr-change);
     font-size: 0;
-    margin: auto;
-    height: 500px;
-    width: 500px;
+    margin: 0;
+    height: 460px;
+    width: 460px;
     padding: 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    cursor: cell;
+    box-shadow: rgb(0 0 0 / 100%) 0px 0px 8px;
 }
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
-
 h1 {
         align-items: center;
-        color: rgb(255, 123, 0);
+        transition: 1.5s;
+        color: var(--clr-change);
+        margin-top: .4rem;
+        margin-bottom: 0rem;
 }
 table {
     border-collapse: collapse;
   }
 td {
-    background-color: aliceblue;
+    background-color: white;
 }
-button {
-    color: rgb(255, 123, 0);
+button{
+    transition: 1.5s;
+    color: var(--clr-change);
     font-size: larger;
     border-radius: 40%;
     transition: 0.4s;
@@ -39,6 +47,7 @@ button {
 }
 button:hover {
     background-color: aqua;
+    transform: scale(1.15);
 }
 #col {
     display: flex;
@@ -52,7 +61,7 @@ button:hover {
     align-items: center;
     margin-top: 6rem;
     margin-right: 3rem;
-    gap: 2rem;
+    gap: 1.8rem;
 }
 .coloringBtn {
     display: flex;
@@ -60,11 +69,54 @@ button:hover {
     align-items: center;
     margin-top: 6rem;
     margin-left: 3rem;
-    gap: 2rem;
+    gap: 1.8rem;
 }
 .alles {
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-self: flex-start;
+}
+input[type=color]::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+    height: 240%; 
+}
+input[type=color]::-webkit-color-swatch-wrapper {   
+    border-radius: 50%;
+    border: none;
+    width: 100%;
+}
+input[type=color] {
+    transition: .5s;
+    margin-bottom: 15px;
+    background-color: antiquewhite;
+}
+input[type=color]:hover {
+      
+      transform: scale(1.15);
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    transition: 1.5s;
+    background: var(--clr-change);
+    border-radius: 25px;
+}
+input[type=range]{
+      width: 120px;
+}
+#out {
+      width: 180px;
+}
+.instr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+.instrDetails {
+      font-size: 13.5px;
+      width: 460px;
 }
