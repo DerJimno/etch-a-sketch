@@ -1,122 +1,136 @@
-html,
-body {
-    margin: 0;
-    background-color: antiquewhite;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 2px solid red; */
 }
+
 :root {
-    --clr-change: rgb(255, 128, 64);
+  --time-set: 2s;
+  --clr-change: rgb(255, 128, 64);
 }
-#container {
-    transition: 1.5s;
-    outline: 2px solid var(--clr-change);
-    font-size: 0;
-    margin: 0;
-    height: 460px;
-    width: 460px;
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    cursor: cell;
-    box-shadow: rgb(0 0 0 / 100%) 0px 0px 8px;
+
+body {
+  background-color: antiquewhite;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-h1 {
-        align-items: center;
-        transition: 1.5s;
-        color: var(--clr-change);
-        margin-top: .4rem;
-        margin-bottom: 0rem;
+
+.title {
+  color: var(--clr-change);
+  transition: var(--time-set);
+  margin-top: .4rem;
 }
-table {
-    border-collapse: collapse;
-  }
-td {
-    background-color: white;
+
+.details {
+  font-size: 15px;
+  width: 400px;
 }
+
+.pad {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.range {
+  width: 170px; /* prevent range from moving container */
+}
+
+.rangeOutput {
+  color: var(--clr-change);
+  transition: var(--time-set);
+}
+
 button{
-    transition: 1.5s;
-    color: var(--clr-change);
-    font-size: larger;
-    border-radius: 40%;
-    transition: 0.4s;
-    padding: 8px;
+  color: var(--clr-change);
+  transition: var(--time-set);
+  font-size: medium;
+  border-radius: 40%;
+  padding: .5rem;
 }
-button:hover {
-    background-color: aqua;
-    transform: scale(1.15);
+
+button:hover{
+  background-color: aqua;
+  transform: scale(1.1);
+  transition: 0.4s;
 }
-#col {
-    display: flex;
-    flex-direction: column-reverse;
-    border: none;
-    border-radius: 10%;
+
+/* container START */
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: cell;
+  box-shadow: rgb(0 0 0 / 100%) 0px 0px 8px;
+  outline: 2px solid var(--clr-change);
+  transition: var(--time-set);
+  border-radius: 5px;
 }
-#contentBtn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 6rem;
-    margin-right: 3rem;
-    gap: 1.8rem;
+
+.square {
+  /* border: 1px solid grey; */
+  background-color: white;
+  flex-basis: calc(100% / 16);
+  aspect-ratio: 1 / 1;
 }
-.coloringBtn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 6rem;
-    margin-left: 3rem;
-    gap: 1.8rem;
+/* container END */
+
+.coloring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
-.alles {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-self: flex-start;
+
+/* make color input rounded */
+input[type=color] {
+  width: 2.5rem;
+  height: 2.5rem; 
+  border-radius: 50%;
+  overflow: hidden;
 }
 input[type=color]::-webkit-color-swatch {
-    border: none;
-    border-radius: 50%;
-    height: 240%; 
+  border: none;
+  border-radius: 50%;
+  padding: 0;
 }
-input[type=color]::-webkit-color-swatch-wrapper {   
-    border-radius: 50%;
-    border: none;
-    width: 100%;
+input[type=color]::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
 }
-input[type=color] {
-    transition: .5s;
-    margin-bottom: 15px;
-    background-color: antiquewhite;
-}
+/* end of rounding */
+
 input[type=color]:hover {
-      
-      transform: scale(1.15);
+  transform: scale(1.1);
+  transition: .4s;
 }
+
 input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 15px;
-    cursor: pointer;
-    transition: 1.5s;
-    background: var(--clr-change);
-    border-radius: 25px;
-}
-input[type=range]{
-      width: 120px;
-}
-#out {
-      width: 180px;
-}
-.instr {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-}
-.instrDetails {
-      font-size: 13.5px;
-      width: 460px;
+  width: 100%;
+  height: 17px;
+  border: 1px solid black;
+  cursor: pointer;
+  background: var(--clr-change);
+  transition: var(--time-set);
+  border-radius: 25px;
 }

@@ -1,54 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Etch-a-Sketch</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" >
-</head>
+    <script src="script.js" defer></script>
+  </head>
 
-<body>
-    <div class="instr">
-        <h1 >Etch a Sketch</h1>
-        <div class="instrDetails">
-            <ol> <div> <font size="+1" ><strong>Rules :</strong></font> <font size="+0.6">(drawing will be hard!)</font>  </div>
-            <li>You can only choose one grid size at a time. Reset if you want it changed.</li>
-            <li>If you choose Rainbow mode, there is no direct come-back to Color mode again! just reset.</li> 
-            </ol>
-        </div>
+  <body>
+    <div class="heading">
+      <h1 class="title">Etch a Sketch</h1>
+      <div class="details">
+        <ol>
+          <strong>Rules:</strong> (Drawing here is hard!)
+          <li>Choose a grid size 1-100.</li>
+          <li>Select the prefered color or draw in rainbow mode.</li> 
+        </ol>
+      </div>
     </div>
 
-<div class="alles">
-    <div id="contentBtn" >
-        <div>
-            <button>Grid's Size</button> 
+    <div class="pad">
+      <div class="options" >
+        <div class="range">
+          <input type="range" min="1" max="100" value="16" step="1"
+            oninput="this.nextElementSibling.value = this.value"> 
+          <output class="rangeOutput">16</output>
         </div>
-        <div id="out"><input type="range" id="gridsSize" class="clearInp"
-         min="0" max="64" value="0" step="1" oninput="this.nextElementSibling.value = this.value" > 
-         <output style="color: var(--clr-change); transition: 2s;">0 X 0</output>
-        </div>
-        <div><button class="clearBtn"> Clear</button> </div>
-    </div>
+        <div><button class="clearBtn">Clear</button> </div>
+      </div>
 
-    <div class="content">
-    <table id="container"></table>
-    </div>
-    <div class="coloringBtn">
-        <button  id="colorBtn">Reset</button>
-        <input type="color" style="cursor:pointer" id="col" value="#FF8040">
-        <div><button  id="rainbowBtn">
-            <font color="#FF2626">R</font>
-            <font color="#252A34">a</font>
-            <font color="#753422">i</font>
-            <font color="#FFD523">n</font>
-            <font color="#0F52BA">b</font>
-            <font color="#66CC66">o</font>
-            <font color="#00C1D4">w</font>
+      <div class="container"></div>
+
+      <div class="coloring">
+        <input type="color" class="color" style="cursor:pointer" value="#FF8040">
+        <div><button id="rainbowBtn">
+          <font color="#FF2626">R</font>
+          <font color="#252A34">a</font>
+          <font color="#753422">i</font>
+          <font color="#FFD523">n</font>
+          <font color="#0F52BA">b</font>
+          <font color="#66CC66">o</font>
+          <font color="#00C1D4">w</font>
         </button></div>
-    </div>
-</div>    
+      </div>
+    </div>    
 
-</body>
+  </body>
 </html>
